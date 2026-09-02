@@ -150,8 +150,14 @@ $content-width-0: 1200px;
   @include fs-2;
 }
 
+// CPAL 2026 uses the whole parent title as an expand/collapse control rather
+// than a link to an otherwise redundant category landing page.
 .nav-list-link-expander {
+  @extend .nav-list-link;
+  width: 100%;
   color: $link-color;
+  text-align: left;
+  cursor: pointer;
 }
 
 @media (max-width: 520px) {
