@@ -43,4 +43,4 @@ Host and institutional acknowledgements will be added when confirmed.
 
 # Conference Sponsors
 
-{% include_relative sponsors.md %}
+Sponsor acknowledgements will be added when confirmed. See the [Sponsors]({{ '/sponsors/' | relative_url }}) page for updates.
