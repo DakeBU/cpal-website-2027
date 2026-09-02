@@ -1,24 +1,13 @@
 ---
 layout: page
-title: Key Dates and Deadlines
+title: Key Dates
 permalink: /deadlines/
-nav_order: 5
+nav_order: 80
 ---
 
-# Key Dates and Deadlines
+# Key Dates
 
-| Milestone | Date |
-|:--|:--|
-| **Conference at Hitotsubashi Hall** | **March 23–26, 2027** |
-| Abstract registration | To be announced |
-| Proceedings paper submission | To be announced |
-| Tutorial proposals | To be announced |
-| Rising Stars applications | To be announced |
-| Recent Spotlight submissions | To be announced |
-| Author discussion and notifications | To be announced |
-| Camera-ready submission | To be announced |
+{: .forthcoming }
+The CPAL 2027 submission and review calendar is still awaiting final committee approval. Confirmed dates will be published here; all submission deadlines will use 23:59 Anywhere on Earth (AoE) unless stated otherwise.
 
-{: .important }
-Submission and notification dates remain under committee review. Dates from
-working drafts are not official until they appear on this page without the
-“To be announced” label.
+The conference itself is confirmed for **March 23–26, 2027** in Tokyo.
