@@ -3,12 +3,10 @@ name: Deploy CPAL 2027 website to GitHub Pages
 on:
   push:
     branches: ["main"]
-  issues:
-    types: [opened]
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -22,20 +20,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Bootstrap website source
-        if: ${{ hashFiles('.bootstrap/part-*') != '' }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          cat .bootstrap/part-* | base64 --decode > /tmp/cpal-site.tar.gz
-          tar -xzf /tmp/cpal-site.tar.gz
-          rm -rf .bootstrap
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git diff --cached --quiet || git commit -m "Build CPAL 2027 website"
-          git push
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
