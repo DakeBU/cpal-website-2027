@@ -1,198 +1,76 @@
-// CPAL 2027 custom presentation layer.
-// The overall structure follows the CPAL 2026 Just the Docs website;
-// refinements here improve responsive behavior and launch-stage clarity.
+// CPAL 2027 presentation layer. The information architecture and visual rhythm
+// intentionally follow the CPAL 2026 website.
 
-:root {
-  --cpal-blue: #2f7fe7;
-  --cpal-blue-dark: #175cae;
-  --cpal-ink: #17324d;
-  --cpal-muted: #5d7083;
-  --cpal-pale: #eef6ff;
-  --cpal-line: #d7e7f8;
-}
-
-.site-logo {
-  background-position: left center;
-  background-size: contain;
-  min-height: 74px;
-}
+$content-width-0: 1200px;
 
 .main-content-wrap {
-  max-width: 1240px;
-  margin: 0 auto;
+  max-width: $content-width;
+  margin: auto;
 }
 
-.main-content h1,
-.main-content h2,
-.main-content h3 {
-  letter-spacing: -0.015em;
-}
-
-.cpal-splash {
+.splash {
   position: relative;
-  overflow: hidden;
-  min-height: 420px;
-  margin: 0 0 2rem;
-  border-radius: 20px;
-  box-shadow: 0 18px 44px rgba(23, 50, 77, 0.14);
-  background: #dbeeff;
+  margin-bottom: 1.5rem;
+
+  img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 520px;
+    object-fit: cover;
+    border-radius: 20px;
+    opacity: 0.48;
+  }
+
+  .topleft {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    color: $body-heading-color;
+    @include fs-7;
+    @include mq(md) { font-weight: 500; }
+  }
+
+  .bottomright {
+    position: absolute;
+    right: 16px;
+    bottom: 8px;
+    color: $body-heading-color;
+    @include fs-4;
+    @include mq(md) {
+      @include fs-6;
+      font-weight: 500;
+    }
+  }
 }
 
-.cpal-splash-image {
-  display: block;
-  width: 100%;
-  min-height: 420px;
-  object-fit: cover;
-}
-
-.cpal-splash-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(12, 43, 75, 0.88) 0%, rgba(20, 73, 126, 0.68) 48%, rgba(33, 113, 185, 0.18) 100%);
-}
-
-.cpal-splash-copy {
-  position: absolute;
-  left: clamp(1.4rem, 5vw, 4.4rem);
-  bottom: clamp(1.7rem, 5vw, 4rem);
-  width: min(780px, calc(100% - 3rem));
-  color: white;
-}
-
-.cpal-splash-copy h1 {
-  max-width: 760px;
-  margin: 0.25rem 0 0.8rem;
-  color: white;
-  font-size: clamp(2rem, 5vw, 4.25rem);
-  line-height: 1.02;
-  text-wrap: balance;
-}
-
-.cpal-splash-kicker {
-  margin: 0;
-  font-size: 0.82rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  opacity: 0.9;
-}
-
-.cpal-splash-meta {
-  margin: 0;
-  font-size: clamp(1rem, 2vw, 1.35rem);
-  font-weight: 600;
-}
-
-.quick-facts {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-  margin: 1.8rem 0;
-}
-
-.quick-fact {
-  display: flex;
-  min-height: 105px;
-  flex-direction: column;
-  justify-content: center;
-  padding: 1.05rem 1.2rem;
-  border: 1px solid var(--cpal-line);
-  border-radius: 14px;
-  background: linear-gradient(145deg, #ffffff 0%, var(--cpal-pale) 100%);
-}
-
-.quick-fact strong {
-  margin: 0.12rem 0;
-  color: var(--cpal-ink);
-  font-size: 1.08rem;
-}
-
-.quick-fact-label {
-  color: var(--cpal-blue-dark);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.home-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem;
-  margin: 1.6rem 0 2.2rem;
-}
-
-.home-committee {
-  margin-top: 2.4rem;
-  padding: 1.35rem 1.5rem;
-  border: 1px solid var(--cpal-line);
-  border-radius: 16px;
-  background: #fbfdff;
-}
-
-.leadership-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-  margin: 0.9rem 0 0.7rem;
-}
-
-.leadership-pill {
-  display: flex;
-  min-width: 210px;
-  flex-direction: column;
-  padding: 0.7rem 0.9rem;
-  border-radius: 10px;
-  background: var(--cpal-pale);
-  text-decoration: none;
-}
-
-.leadership-pill span {
-  color: var(--cpal-ink);
-  font-weight: 700;
-}
-
-.leadership-pill small {
-  color: var(--cpal-muted);
+.cpal-photo-splash img {
+  object-position: center 52%;
+  filter: saturate(0.82) brightness(1.08);
 }
 
 .organizer-section {
-  margin: 2.2rem 0 2.8rem;
-}
-
-.organizer-section > h2 {
-  margin-bottom: 1rem;
-  padding-bottom: 0.45rem;
-  border-bottom: 2px solid var(--cpal-line);
+  margin: 1.5rem 0 2.2rem;
 }
 
 .organizer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
-  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .organizer-card {
   display: flex;
-  min-height: 136px;
+  width: 310px;
+  max-width: 100%;
+  margin: $sp-4;
   align-items: center;
-  padding: 1rem;
-  border: 1px solid #dce9f6;
-  border-radius: 16px;
-  background: #ffffff;
-  box-shadow: 0 6px 18px rgba(28, 68, 108, 0.06);
-  transition: transform 150ms ease, box-shadow 150ms ease, border-color 150ms ease;
-}
-
-.organizer-card:hover {
-  transform: translateY(-2px);
-  border-color: #b6d4f2;
-  box-shadow: 0 12px 28px rgba(28, 68, 108, 0.11);
 }
 
 .organizer-photo-link {
   flex: 0 0 auto;
-  margin-right: 1rem;
+  margin-right: $sp-4;
 }
 
 .organizer-photo-wrap {
@@ -202,17 +80,8 @@
   height: 100px;
   overflow: hidden;
   place-items: center;
-  border: 3px solid #ffffff;
   border-radius: 50%;
-  background: linear-gradient(145deg, #d8eaff, #f5faff);
-  box-shadow: 0 0 0 1px #c8ddf2;
-}
-
-.organizer-initials {
-  color: var(--cpal-blue-dark);
-  font-size: 1.35rem;
-  font-weight: 800;
-  letter-spacing: 0.03em;
+  background: #eef5ff;
 }
 
 .organizer-photo {
@@ -222,108 +91,81 @@
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  background: #edf5fd;
+}
+
+.organizer-initials {
+  color: $link-color;
+  font-weight: 700;
 }
 
 .organizer-copy {
   min-width: 0;
 }
 
-.organizer-name {
-  margin: 0 0 0.2rem !important;
-  font-size: 1.08rem !important;
-  line-height: 1.25;
-}
-
+.organizer-name,
 .organizer-affiliation,
 .organizer-role {
-  margin: 0.18rem 0 !important;
-  line-height: 1.35;
+  margin: $sp-1 !important;
+}
+
+.organizer-name {
+  font-size: 1rem !important;
 }
 
 .organizer-affiliation {
-  color: var(--cpal-ink);
-  font-size: 0.9rem;
+  line-height: 1.3;
 }
 
 .organizer-role {
-  color: var(--cpal-muted);
+  color: $grey-dk-000;
   font-size: 0.8rem;
 }
 
-.status-table td:first-child {
-  width: 30%;
-  font-weight: 700;
+.cpal-connect-footer {
+  margin-top: 2rem;
+  font-size: 1rem;
 }
 
-.venue-panel {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 1.2rem;
-  margin: 1.5rem 0;
+.cpal-connect-title {
+  margin-bottom: .35rem;
+  color: $grey-dk-000;
+  @include fs-5;
 }
 
-.venue-panel > div {
-  padding: 1.2rem;
-  border: 1px solid var(--cpal-line);
-  border-radius: 14px;
-  background: #fbfdff;
+.cpal-connect-icons {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  margin: .35rem 0 1rem;
 }
 
-.credit-list {
-  columns: 2 340px;
-  column-gap: 2rem;
+.cpal-connect-icons img {
+  width: 46px;
+  height: 46px;
+  border: 0 !important;
+  object-fit: contain;
 }
 
-.credit-item {
-  break-inside: avoid;
-  margin: 0 0 0.8rem;
+.cpal-connect-footer credit {
+  @include fs-2;
 }
 
-.site-footer-note {
-  margin-bottom: 0.5rem;
-  color: #6f7e8d;
-  font-size: 0.75rem;
-}
-
-@media (max-width: 800px) {
-  .cpal-splash,
-  .cpal-splash-image {
-    min-height: 360px;
-  }
-
-  .quick-facts,
-  .venue-panel {
-    grid-template-columns: 1fr;
-  }
+.nav-list-link-expander {
+  color: $link-color;
 }
 
 @media (max-width: 520px) {
-  .cpal-splash {
-    min-height: 390px;
-    border-radius: 14px;
+  .splash img {
+    min-height: 280px;
   }
 
-  .cpal-splash-image {
-    min-height: 390px;
-  }
-
-  .cpal-splash-copy {
-    left: 1.2rem;
-    bottom: 1.4rem;
-    width: calc(100% - 2.4rem);
-  }
-
-  .organizer-grid {
-    grid-template-columns: 1fr;
+  .splash .topleft {
+    max-width: calc(100% - 32px);
   }
 
   .organizer-card {
-    align-items: flex-start;
-  }
-
-  .organizer-photo-wrap {
-    width: 82px;
-    height: 82px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
