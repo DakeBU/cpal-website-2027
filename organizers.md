@@ -4,8 +4,7 @@ title: Organizers
 permalink: /organizers/
 nav_order: 90
 has_children: true
+search_exclude: true
 ---
 
-# Organizers
-
-See the Organization Committee, Advisory Committee, and Area Chairs pages for CPAL 2027.
+{% include splash.html %}
