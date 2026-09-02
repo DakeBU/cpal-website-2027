@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Invited Speakers
+title: Keynote Speakers
 permalink: /speakers/
-nav_order: 8
+nav_order: 40
 ---
 
-# Invited Speakers
+# Keynote Speakers
 
 {: .forthcoming }
-CPAL 2027 invited speakers and talk information will be announced here.
+CPAL 2027 keynote speakers will be announced after invitations are confirmed.
