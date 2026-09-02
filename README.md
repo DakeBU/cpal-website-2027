@@ -20,13 +20,12 @@ as well as scientific foundations for learning with parsimony.
 We are pleased to announce the Fourth Conference on Parsimony and Learning,
 to be held at **Hitotsubashi Hall in Tokyo, Japan**.
 
-Registration and the CPAL 2027 OpenReview portal are being prepared. Their
-permanent positions in the website header are already reserved and will be
-updated with the official external links when released.
+Registration and the CPAL 2027 OpenReview portal are being prepared. The
+header links are already reserved and will point to the official external
+services when they are released.
 
 <span class="fs-6">
-[Registration]({{ '/registration/' | relative_url }}){: .btn}
-[CPAL OpenReview]({{ '/openreview/' | relative_url }}){: .btn}
+[Register Now]({{ '/registration/' | relative_url }}){: .btn}
 </span>
 
 # Keynote Speakers
