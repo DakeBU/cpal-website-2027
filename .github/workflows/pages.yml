@@ -3,6 +3,8 @@ name: Deploy CPAL 2027 website to GitHub Pages
 on:
   push:
     branches: ["main"]
+  issues:
+    types: [opened]
   workflow_dispatch:
 
 permissions:
