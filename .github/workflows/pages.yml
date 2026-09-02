@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -20,6 +20,33 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Mirror Sho Sonoda portrait from personal website
+        if: ${{ hashFiles('assets/images/organizers/sho-sonoda.jpg') == '' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets/images/organizers
+          curl --fail --location --retry 4 --retry-delay 2 \
+            'https://lh3.googleusercontent.com/sitesv/AG8ngQV0mzeNxpQgdWlNFNSB7Nsc3XmLK3LGrA0F4sczC5HaNg_l3gxEl7887Ew4y7GqXPOPDxNCP3OeP0KmoBUrmzEq0pDLKwq8stEVy_fDsQ7xyhswpUqM8gJWEABJwLqLEj7ew5UQvy8Z6WDEi6NRBLBE-d4rQ4uphN8iP0OKNVroLiiV-Czc_PZj_n3qbASBZGmth0qa_TBUG33cUDjRqkVY6M6vEXgJF-K9HtatIuI=w1280' \
+            --output assets/images/organizers/sho-sonoda.jpg
+          test -s assets/images/organizers/sho-sonoda.jpg
+          file assets/images/organizers/sho-sonoda.jpg
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('_data/organizers.yml')
+          text = p.read_text()
+          old = '  photo: https://lh3.googleusercontent.com/sitesv/AG8ngQV0mzeNxpQgdWlNFNSB7Nsc3XmLK3LGrA0F4sczC5HaNg_l3gxEl7887Ew4y7GqXPOPDxNCP3OeP0KmoBUrmzEq0pDLKwq8stEVy_fDsQ7xyhswpUqM8gJWEABJwLqLEj7ew5UQvy8Z6WDEi6NRBLBE-d4rQ4uphN8iP0OKNVroLiiV-Czc_PZj_n3qbASBZGmth0qa_TBUG33cUDjRqkVY6M6vEXgJF-K9HtatIuI=w1280'
+          new = '  photo: /assets/images/organizers/sho-sonoda.jpg'
+          if old not in text:
+              raise SystemExit('Sho Sonoda remote portrait URL not found in organizer data')
+          p.write_text(text.replace(old, new, 1))
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/images/organizers/sho-sonoda.jpg _data/organizers.yml
+          git commit -m 'Host Sho Sonoda portrait locally'
+          git push
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
