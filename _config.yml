@@ -1,0 +1,58 @@
+title: Conference on Parsimony and Learning (CPAL)
+description: >-
+  The Fourth Conference on Parsimony and Learning (CPAL 2027),
+  March 23–26, 2027, at Hitotsubashi Hall in Tokyo, Japan.
+url: "https://dakebu.github.io"
+baseurl: "/cpal-website-2027"
+repository: DakeBU/cpal-website-2027
+
+# CPAL 2027 intentionally keeps the same Jekyll/Just the Docs visual language
+# as the CPAL 2026 website while remaining an independent repository.
+theme: just-the-docs
+color_scheme: cpal
+logo: "/assets/images/logo.svg"
+favicon_ico: "/assets/images/favicon.svg"
+
+search_enabled: true
+heading_anchors: true
+permalink: pretty
+nav_sort: case_insensitive
+aux_links_new_tab: true
+aux_links:
+  "CPAL 2026":
+    - "https://cpal.cc/"
+  "Website source":
+    - "https://github.com/DakeBU/cpal-website-2027"
+
+gh_edit_link: false
+last_edit_timestamp: true
+last_edit_time_format: "%b %e, %Y"
+
+footer_content: >-
+  CPAL 2027 · March 23–26, 2027 · Tokyo, Japan.<br>
+  Design lineage and portrait credits are documented on the
+  <a href="/cpal-website-2027/attribution/">Attribution</a> page.
+
+callouts:
+  announcement:
+    title: Announcement
+    color: blue
+  important:
+    title: Important
+    color: yellow
+  forthcoming:
+    title: Forthcoming
+    color: grey-lt
+
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - CONTENT_STATUS.md
+  - CONTRIBUTING.md
+  - docs
+  - vendor
+  - README_INTERNAL.md

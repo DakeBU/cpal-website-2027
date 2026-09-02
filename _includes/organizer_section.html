@@ -1,0 +1,33 @@
+{% assign people = site.data.organizers | where: "role_key", include.role %}
+{% if people.size > 0 %}
+<section class="organizer-section" aria-labelledby="organizer-{{ include.role }}">
+  <h2 id="organizer-{{ include.role }}">{{ include.title }}</h2>
+  <div class="organizer-grid">
+    {% for person in people %}
+    <article class="organizer-card">
+      <a class="organizer-photo-link" href="{{ person.website }}" target="_blank" rel="noopener" aria-label="Visit {{ person.name }}'s website">
+        <span class="organizer-photo-wrap">
+          <span class="organizer-initials" aria-hidden="true">{{ person.initials }}</span>
+          <img
+            class="organizer-photo"
+            src="{{ person.photo }}"
+            alt="Portrait of {{ person.name }}"
+            loading="lazy"
+            decoding="async"
+            referrerpolicy="no-referrer"
+            style="object-position: {{ person.photo_position | default: '50% 50%' }}"
+            onerror="this.onerror=null;this.style.display='none';">
+        </span>
+      </a>
+      <div class="organizer-copy">
+        <h3 class="organizer-name no_anchor">
+          <a href="{{ person.website }}" target="_blank" rel="noopener">{{ person.name }}</a>
+        </h3>
+        <p class="organizer-affiliation">{{ person.affiliation }}</p>
+        <p class="organizer-role">{{ person.role }}</p>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
