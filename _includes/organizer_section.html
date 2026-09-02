@@ -4,13 +4,17 @@
   <h2 id="organizer-{{ include.role }}">{{ include.title }}</h2>
   <div class="organizer-grid">
     {% for person in people %}
+    {% assign photo_src = person.photo %}
+    {% unless person.photo contains '://' %}
+      {% assign photo_src = person.photo | relative_url %}
+    {% endunless %}
     <article class="organizer-card">
       <a class="organizer-photo-link" href="{{ person.website }}" target="_blank" rel="noopener" aria-label="Visit {{ person.name }}'s website">
         <span class="organizer-photo-wrap">
           <span class="organizer-initials" aria-hidden="true">{{ person.initials }}</span>
           <img
             class="organizer-photo"
-            src="{{ person.photo }}"
+            src="{{ photo_src }}"
             alt="Portrait of {{ person.name }}"
             loading="lazy"
             decoding="async"
