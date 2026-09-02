@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -20,44 +20,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Mirror Sho Sonoda portrait locally
-        if: ${{ hashFiles('assets/images/organizers/sho-sonoda.jpg') == '' }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p assets/images/organizers
-          if curl --fail --location --retry 4 --retry-delay 2 --user-agent 'Mozilla/5.0' 'https://research.cyberagent.ai/wp-content/uploads/2025/06/%E5%9C%92%E7%94%B0%E7%BF%94-300x300.jpg' --output assets/images/organizers/sho-sonoda.jpg; then
-            test -s assets/images/organizers/sho-sonoda.jpg
-            file assets/images/organizers/sho-sonoda.jpg | grep -Ei 'JPEG|PNG|WebP|image'
-            SHO_PHOTO='/assets/images/organizers/sho-sonoda.jpg'
-            SHO_CREDIT='CyberAgent AI Lab profile'
-            SHO_CREDIT_URL='https://research.cyberagent.ai/people/s_sonoda/'
-          else
-            rm -f assets/images/organizers/sho-sonoda.jpg
-            SHO_PHOTO='https://avatars.githubusercontent.com/u/123361028?v=4'
-            SHO_CREDIT='Sho Sonoda GitHub profile'
-            SHO_CREDIT_URL='https://github.com/shosonoda'
-          fi
-          export SHO_PHOTO SHO_CREDIT SHO_CREDIT_URL
-          python - <<'PY'
-          import os
-          from pathlib import Path
-          p = Path('_data/organizers.yml')
-          text = p.read_text()
-          old_photo = '  photo: https://lh3.googleusercontent.com/sitesv/AG8ngQV0mzeNxpQgdWlNFNSB7Nsc3XmLK3LGrA0F4sczC5HaNg_l3gxEl7887Ew4y7GqXPOPDxNCP3OeP0KmoBUrmzEq0pDLKwq8stEVy_fDsQ7xyhswpUqM8gJWEABJwLqLEj7ew5UQvy8Z6WDEi6NRBLBE-d4rQ4uphN8iP0OKNVroLiiV-Czc_PZj_n3qbASBZGmth0qa_TBUG33cUDjRqkVY6M6vEXgJF-K9HtatIuI=w1280'
-          if old_photo not in text:
-              raise SystemExit('Sho Sonoda remote portrait URL not found in organizer data')
-          text = text.replace(old_photo, '  photo: ' + os.environ['SHO_PHOTO'], 1)
-          text = text.replace('  photo_credit: Personal website\n  photo_credit_url: https://sites.google.com/view/shosonoda/home', '  photo_credit: ' + os.environ['SHO_CREDIT'] + '\n  photo_credit_url: ' + os.environ['SHO_CREDIT_URL'], 1)
-          p.write_text(text)
-          PY
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add _data/organizers.yml
-          if [ -f assets/images/organizers/sho-sonoda.jpg ]; then git add assets/images/organizers/sho-sonoda.jpg; fi
-          git commit -m 'Fix Sho Sonoda portrait source'
-          git push
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
