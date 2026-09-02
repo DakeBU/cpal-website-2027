@@ -21,24 +21,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Mirror Sho Sonoda portrait from personal website
+      - name: Mirror Sho Sonoda portrait locally
         if: ${{ hashFiles('assets/images/organizers/sho-sonoda.jpg') == '' }}
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p assets/images/organizers
-          UA='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/152.0.0.0 Safari/537.36'
-          curl --fail --location --silent --show-error \
-            --user-agent "$UA" \
-            --cookie-jar /tmp/sho-google.cookies \
-            'https://sites.google.com/view/shosonoda/home' \
-            --output /tmp/sho-home.html
           curl --fail --location --retry 4 --retry-delay 2 \
-            --user-agent "$UA" \
-            --cookie /tmp/sho-google.cookies \
-            --referer 'https://sites.google.com/view/shosonoda/home' \
-            --header 'Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8' \
-            'https://lh3.googleusercontent.com/sitesv/AG8ngQV0mzeNxpQgdWlNFNSB7Nsc3XmLK3LGrA0F4sczC5HaNg_l3gxEl7887Ew4y7GqXPOPDxNCP3OeP0KmoBUrmzEq0pDLKwq8stEVy_fDsQ7xyhswpUqM8gJWEABJwLqLEj7ew5UQvy8Z6WDEi6NRBLBE-d4rQ4uphN8iP0OKNVroLiiV-Czc_PZj_n3qbASBZGmth0qa_TBUG33cUDjRqkVY6M6vEXgJF-K9HtatIuI=w1280' \
+            --user-agent 'Mozilla/5.0' \
+            'https://research.cyberagent.ai/wp-content/uploads/2025/06/%E5%9C%92%E7%94%B0%E7%BF%94-300x300.jpg' \
             --output assets/images/organizers/sho-sonoda.jpg
           test -s assets/images/organizers/sho-sonoda.jpg
           file assets/images/organizers/sho-sonoda.jpg | grep -Ei 'JPEG|PNG|WebP|image'
@@ -46,10 +37,16 @@ jobs:
           from pathlib import Path
           p = Path('_data/organizers.yml')
           text = p.read_text()
-          old = '  photo: https://lh3.googleusercontent.com/sitesv/AG8ngQV0mzeNxpQgdWlNFNSB7Nsc3XmLK3LGrA0F4sczC5HaNg_l3gxEl7887Ew4y7GqXPOPDxNCP3OeP0KmoBUrmzEq0pDLKwq8stEVy_fDsQ7xyhswpUqM8gJWEABJwLqLEj7ew5UQvy8Z6WDEi6NRBLBE-d4rQ4uphN8iP0OKNVroLiiV-Czc_PZj_n3qbASBZGmth0qa_TBUG33cUDjRqkVY6M6vEXgJF-K9HtatIuI=w1280'
-          new = '  photo: /assets/images/organizers/sho-sonoda.jpg'
+          old = '''  photo: https://lh3.googleusercontent.com/sitesv/AG8ngQV0mzeNxpQgdWlNFNSB7Nsc3XmLK3LGrA0F4sczC5HaNg_l3gxEl7887Ew4y7GqXPOPDxNCP3OeP0KmoBUrmzEq0pDLKwq8stEVy_fDsQ7xyhswpUqM8gJWEABJwLqLEj7ew5UQvy8Z6WDEi6NRBLBE-d4rQ4uphN8iP0OKNVroLiiV-Czc_PZj_n3qbASBZGmth0qa_TBUG33cUDjRqkVY6M6vEXgJF-K9HtatIuI=w1280
+  photo_position: 50% 42%
+  photo_credit: Personal website
+  photo_credit_url: https://sites.google.com/view/shosonoda/home'''
+          new = '''  photo: /assets/images/organizers/sho-sonoda.jpg
+  photo_position: 50% 42%
+  photo_credit: CyberAgent AI Lab profile
+  photo_credit_url: https://research.cyberagent.ai/people/s_sonoda/'''
           if old not in text:
-              raise SystemExit('Sho Sonoda remote portrait URL not found in organizer data')
+              raise SystemExit('Sho Sonoda portrait block not found in organizer data')
           p.write_text(text.replace(old, new, 1))
           PY
           git config user.name 'github-actions[bot]'
