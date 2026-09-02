@@ -104,10 +104,10 @@
   role: Local Chair
   affiliation: RIKEN AIP & CyberAgent
   website: https://sites.google.com/view/shosonoda/home
-  photo: https://lh3.googleusercontent.com/sitesv/AG8ngQV0mzeNxpQgdWlNFNSB7Nsc3XmLK3LGrA0F4sczC5HaNg_l3gxEl7887Ew4y7GqXPOPDxNCP3OeP0KmoBUrmzEq0pDLKwq8stEVy_fDsQ7xyhswpUqM8gJWEABJwLqLEj7ew5UQvy8Z6WDEi6NRBLBE-d4rQ4uphN8iP0OKNVroLiiV-Czc_PZj_n3qbASBZGmth0qa_TBUG33cUDjRqkVY6M6vEXgJF-K9HtatIuI=w1280
+  photo: /assets/images/organizers/sho-sonoda.jpg
   photo_position: 50% 42%
-  photo_credit: Personal website
-  photo_credit_url: https://sites.google.com/view/shosonoda/home
+  photo_credit: CyberAgent AI Lab profile
+  photo_credit_url: https://research.cyberagent.ai/people/s_sonoda/
 - name: Tomoya Wakayama
   initials: TW
   role_key: local
