@@ -2,12 +2,11 @@
 layout: page
 title: Registration
 permalink: /registration/
-nav_order: 10
+parent: Register & Attend
+nav_order: 2
 ---
 
 # Registration
 
 {: .forthcoming }
-Registration categories, fees, deadlines, cancellation rules, and the official
-registration portal will be announced after approval. No third-party payment
-link is currently authorized for CPAL 2027.
+Registration categories, fees, deadlines, and the official CPAL 2027 registration link will be announced here when finalized.
