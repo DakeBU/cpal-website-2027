@@ -25,6 +25,10 @@ Portraits are displayed for conference identification and link to the correspond
 
 <div class="credit-list">
 {% for person in site.data.organizers %}
+  {% if person.name == 'Atsushi Nitanda' %}
+  <p class="credit-item"><strong>Atsushi Nitanda</strong> — portrait supplied directly to the CPAL 2027 Web Chair.</p>
+  {% else %}
   <p class="credit-item"><strong>{{ person.name }}</strong> — <a href="{{ person.photo_credit_url }}" target="_blank" rel="noopener">{{ person.photo_credit }}</a>.</p>
+  {% endif %}
 {% endfor %}
 </div>
