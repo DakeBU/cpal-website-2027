@@ -10,6 +10,7 @@ nav_order: 1
 
 {% include organizer_section.html role="general" title="General Chairs" %}
 {% include organizer_section.html role="program" title="Program Chairs" %}
+{% include organizer_section.html role="advisor" title="Senior Advisors to Program Chairs" %}
 {% include organizer_section.html role="local" title="Local Chairs" %}
 {% include organizer_section.html role="publication" title="Publication Chairs" %}
 {% include organizer_section.html role="industry" title="Industry Liaison Chairs" %}

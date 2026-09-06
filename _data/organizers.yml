@@ -98,6 +98,16 @@
   photo_position: 50% 40%
   photo_credit: CPAL 2026 organizer portrait archive
   photo_credit_url: https://github.com/conf-parsimonyandlearning/cpal-website
+- name: Jere Sulam
+  initials: JS
+  role_key: advisor
+  role: Senior Advisor to Program Chairs
+  affiliation: Johns Hopkins University
+  website: https://jsulam.github.io/
+  photo: https://www.bme.jhu.edu/wp-content/uploads/2019/10/Jeremias-Sulam-2025.jpg
+  photo_position: 50% 36%
+  photo_credit: Johns Hopkins Biomedical Engineering profile
+  photo_credit_url: https://www.bme.jhu.edu/people/faculty/jeremias-sulam/
 - name: Sho Sonoda
   initials: SS
   role_key: local
@@ -168,6 +178,16 @@
   photo_position: 50% 38%
   photo_credit: Personal website
   photo_credit_url: https://joeyzhouty.github.io/index.html
+- name: Atsushi Nitanda
+  initials: AN
+  role_key: industry
+  role: Industry Liaison Chair
+  affiliation: A*STAR CFAR & Nanyang Technological University
+  website: https://sites.google.com/site/atsushinitanda/
+  photo: https://avatars.githubusercontent.com/anitan0925
+  photo_position: 50% 38%
+  photo_credit: GitHub profile
+  photo_credit_url: https://github.com/anitan0925
 - name: Yani Ioannou
   initials: YI
   role_key: publicity

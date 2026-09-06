@@ -13,7 +13,11 @@ This CPAL 2027 site is an independent implementation in a new repository; it is 
 
 ## Tokyo splash photograph
 
-The home-page splash uses **“20110405-TokyoTower-Sakura01.jpg”**, a spring view of Zōjō-ji and Tokyo Tower by Wikimedia Commons user 東京太郎 / Taro Tokyo, licensed under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/). Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:20110405-TokyoTower-Sakura01.jpg). The website displays the photograph with reduced opacity and light color treatment to match CPAL's established splash style.
+The site splash uses **“20110405-TokyoTower-Sakura01.jpg”**, a spring view of Zōjō-ji and Tokyo Tower by Wikimedia Commons user 東京太郎 / Taro Tokyo, licensed under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/). Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:20110405-TokyoTower-Sakura01.jpg). The website displays the photograph with reduced opacity and light color treatment to match CPAL's established splash style.
+
+## Venue imagery and maps
+
+The Hitotsubashi Hall / National Center of Sciences entrance photograph on the venue page is displayed from the [ACSOS 2025 Hitotsubashi Hall venue page](https://2025.acsos.org/venue/acsos-2025-venue). The access map is provided by the official [Hitotsubashi University Hitotsubashi Hall access page](https://www.hit-u.ac.jp/hall/accessen.html). These materials are used for conference-location identification; CPAL does not claim ownership of them.
 
 ## Organizer portraits
 

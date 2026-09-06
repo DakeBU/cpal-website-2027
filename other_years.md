@@ -9,5 +9,4 @@ nav_order: 120
 
 - [CPAL 2026](https://cpal.cc/)
 - [CPAL 2025](https://2025.cpal.cc/)
-
-Earlier editions will be added as permanent links are consolidated.
+- [CPAL 2024](https://2024.cpal.cc/)
