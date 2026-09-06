@@ -5,9 +5,13 @@
   <div class="organizer-grid">
     {% for person in people %}
     {% assign photo_src = person.photo %}
-    {% unless person.photo contains '://' %}
+    {% if person.name == 'Atsushi Nitanda' %}
+      {% assign photo_src = '/assets/images/organizers/atsushi-nitanda.jpg' | relative_url %}
+    {% elsif person.photo contains '://' %}
+      {% assign photo_src = person.photo %}
+    {% else %}
       {% assign photo_src = person.photo | relative_url %}
-    {% endunless %}
+    {% endif %}
     <article class="organizer-card">
       <a class="organizer-photo-link" href="{{ person.website }}" target="_blank" rel="noopener" aria-label="Visit {{ person.name }}'s website">
         <span class="organizer-photo-wrap">
