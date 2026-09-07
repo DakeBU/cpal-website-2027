@@ -3,7 +3,7 @@
   role_key: general
   role: General Chair
   affiliation: The University of Hong Kong
-  website: https://people.eecs.berkeley.edu/~yima/
+  website: https://datascience.hku.hk/people/yi-ma/
   photo: https://raw.githubusercontent.com/conf-parsimonyandlearning/cpal-website/main/assets/images/ma.jpeg
   photo_position: 50% 42%
   photo_credit: CPAL 2026 organizer portrait archive
@@ -184,10 +184,10 @@
   role: Industry Liaison Chair
   affiliation: A*STAR CFAR & Nanyang Technological University
   website: https://sites.google.com/site/atsushinitanda/
-  photo: https://avatars.githubusercontent.com/anitan0925
+  photo: /assets/images/organizers/atsushi-nitanda.jpg
   photo_position: 50% 38%
-  photo_credit: GitHub profile
-  photo_credit_url: https://github.com/anitan0925
+  photo_credit: Portrait supplied to CPAL 2027 Web Chair
+  photo_credit_url: https://sites.google.com/site/atsushinitanda/
 - name: Yani Ioannou
   initials: YI
   role_key: publicity
