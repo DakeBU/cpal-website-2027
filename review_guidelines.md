@@ -34,7 +34,7 @@ For Recent Spotlight submissions, judgments should be calibrated to the stated s
 
 ## Confidentiality and AI-assisted tools
 
-Reviewers and committee members must preserve submission confidentiality. Unpublished submission material may not be uploaded to external AI systems unless CPAL explicitly provides an approved confidential tool and process.
+Reviewers and committee members must preserve submission confidentiality. Unpublished submission material may not be uploaded to external AI systems.
 
 Authors may use AI-assisted tools, but remain fully responsible for the accuracy, originality, citations, ethics, and scientific integrity of their work. Important, original, or non-standard methodological use should be disclosed sufficiently for readers to understand and reproduce it.
 
