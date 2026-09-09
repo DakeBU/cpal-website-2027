@@ -5,20 +5,35 @@ permalink: /sponsorship_opportunities/
 nav_exclude: true
 ---
 
-# CPAL 2027 Sponsorship Opportunities
+# CPAL 2027 Sponsorship Prospectus
 
-The Fourth Conference on Parsimony and Learning (CPAL 2027) will take place **March 23–26, 2027** at **Hitotsubashi Hall in Tokyo, Japan**.
+The Conference on Parsimony and Learning (CPAL) will take place in **Tokyo, Japan, March 23–26, 2027**. CPAL brings together leading AI researchers and industry experts working on parsimonious and low-dimensional structures in machine learning, signal processing, and optimization.
 
-CPAL brings together researchers working on the mathematical, algorithmic, and systems foundations of parsimonious learning, including sparsity, low-dimensional structure, efficient learning, foundation and generative models, optimization, signal processing, scientific machine learning, and intelligent systems.
+For sponsorship opportunities, contact **Wei Huang** ([wei.huang.vr@riken.jp](mailto:wei.huang.vr@riken.jp)) or **Ambar Pal** ([ambarpal.cs@gmail.com](mailto:ambarpal.cs@gmail.com)).
 
-We are currently welcoming sponsorship inquiries from companies, foundations, research laboratories, and other organizations interested in supporting the CPAL community and engaging with conference participants.
+## Diamond Tier ($20,000 and above)
 
-## Sponsorship brochure and tiers
+- All Platinum benefits
+- Large exhibition space
+- Option to host an industry session or lunch talk
+- Logo in all conference advertising and event banners
 
-The detailed **CPAL 2027 sponsorship brochure and tier description** are currently being finalized. Once the package is approved, the downloadable brochure will be linked directly from this page.
+## Platinum ($10,000)
 
-Organizations interested in discussing sponsorship now, or in receiving the current sponsorship information, should contact:
+- All Gold benefits
+- Small exhibition space
+- Access to information of opted-in attendees (CV, contact) for recruiting
 
-**[pcs@cpal.cc](mailto:pcs@cpal.cc)**
+## Gold ($5,000)
 
-This page is the permanent sponsorship-information link for CPAL 2027, so potential sponsors may bookmark it while the final tier sheet is being prepared.
+- Two complimentary registrations
+- Logo and acknowledgment on the conference website, schedule, and proceedings
+- Acknowledgment during opening remarks
+
+## Budget Allocation
+
+Sponsorship funds will be used for:
+
+- Travel grants and registration waivers for students who are underrepresented minorities
+- Venue reservation, poster sessions, and technical support
+- Travel and accommodation for keynote speakers
