@@ -76,10 +76,6 @@ The university's official access information is also available on the [Hitotsuba
 
 The venue is in a highly walkable university and publishing district. **Jimbocho** is known for bookstores, cafés, curry shops, and casual restaurants; **Takebashi** borders the Imperial Palace grounds; and **Otemachi / Tokyo Station** are only a short subway or taxi ride away. Convenience stores, coffee shops, and restaurants are available throughout the surrounding blocks.
 
-## On-site Logistics
-
-Registration, room assignments, poster setup times, catering locations, accessibility details, and other day-of-conference instructions will be added to this page together with the final program. Attendees are strongly encouraged to use public transportation, as parking near the National Center of Sciences is limited and central Tokyo is exceptionally well served by rail and subway.
-
 ## Emergency Information
 
 For police assistance in Japan, call **110**. For an ambulance or fire emergency, call **119**. Hotel staff and venue staff can also assist with local medical and transportation questions.
