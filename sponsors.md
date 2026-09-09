@@ -9,11 +9,11 @@ nav_order: 100
 
 CPAL 2027 welcomes sponsorship from industry, foundations, research organizations, and other partners who share the conference's goal of advancing parsimonious learning across theory, algorithms, systems, and applications.
 
-Sponsorship helps support the scientific program and the broader CPAL community. Organizations interested in supporting CPAL 2027 are warmly invited to contact the conference at [pcs@cpal.cc](mailto:pcs@cpal.cc).
+Sponsorship supports travel grants and registration waivers, conference venue and poster-session costs, technical support, and travel and accommodation for keynote speakers.
+
+Organizations interested in supporting CPAL 2027 are invited to contact **Wei Huang** ([wei.huang.vr@riken.jp](mailto:wei.huang.vr@riken.jp)) or **Ambar Pal** ([ambarpal.cs@gmail.com](mailto:ambarpal.cs@gmail.com)).
 
 {: .fs-6 .text-center}
-[Sponsorship brochure / tier description]({{ site.baseurl }}/sponsorship_opportunities/)
-
-The detailed 2027 sponsorship brochure and approved tier sheet are being finalized. The link above will remain the permanent entry point for sponsorship information and will be updated with the downloadable brochure as soon as the package is approved.
+[View the CPAL 2027 Sponsorship Prospectus and Tiers]({{ site.baseurl }}/sponsorship_opportunities/)
 
 Confirmed sponsors and acknowledgements will be displayed on this page.
