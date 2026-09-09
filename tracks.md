@@ -66,4 +66,4 @@ Selection considers CPAL fit, clarity, technical credibility, timeliness, and di
 
 Authors may use AI-assisted tools in conducting research and preparing manuscripts, but remain fully responsible for the accuracy, originality, citations, ethics, and scientific integrity of all submitted content. Important, original, or non-standard methodological use of such tools should be disclosed sufficiently for readers to understand and reproduce the work. Routine spelling, grammar, formatting, or basic coding assistance need not be disclosed. AI systems should not be listed as authors.
 
-Reviewers and committee members must preserve submission confidentiality and may not upload unpublished submission material to external AI systems unless the conference explicitly provides an approved confidential tool and process.
+Reviewers and committee members must preserve submission confidentiality and may not upload unpublished submission material to external AI systems.
