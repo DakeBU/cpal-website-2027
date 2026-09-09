@@ -7,5 +7,4 @@ nav_order: 40
 
 # Keynote Speakers
 
-{: .forthcoming }
-CPAL 2027 keynote speakers will be announced after invitations are confirmed.
+CPAL keynote sessions feature invited perspectives on fundamental and emerging questions in parsimonious learning, spanning theory, algorithms, systems, and applications.
