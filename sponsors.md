@@ -15,5 +15,3 @@ Organizations interested in supporting CPAL 2027 are invited to contact **Wei Hu
 
 {: .fs-6 .text-center}
 [View the CPAL 2027 Sponsorship Prospectus and Tiers]({{ site.baseurl }}/sponsorship_opportunities/)
-
-Confirmed sponsors and acknowledgements will be displayed on this page.
