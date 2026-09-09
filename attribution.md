@@ -17,7 +17,9 @@ The site splash uses **“20110405-TokyoTower-Sakura01.jpg”**, a spring view o
 
 ## Venue imagery and maps
 
-The Hitotsubashi Hall / National Center of Sciences entrance photograph on the venue page is displayed from the [ACSOS 2025 Hitotsubashi Hall venue page](https://2025.acsos.org/venue/acsos-2025-venue). The access map is provided by the official [Hitotsubashi University Hitotsubashi Hall access page](https://www.hit-u.ac.jp/hall/accessen.html). These materials are used for conference-location identification; CPAL does not claim ownership of them.
+The venue photograph is **“NII - National Center of Sciences Build.jpg”** by Gabriel Synnaeve, showing the National Center of Sciences building that houses Hitotsubashi Hall. It is sourced from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:NII_-_National_Center_of_Sciences_Build.jpg) and is licensed under [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/).
+
+The access map is reproduced from the official [Hitotsubashi University Hitotsubashi Hall English access PDF](https://www.hit-u.ac.jp/hall/file/accesspdfen.pdf). The website hosts a local rasterized copy so the map renders reliably in browsers; the map itself remains attributed to Hitotsubashi University and links back to the official PDF.
 
 ## Organizer portraits
 

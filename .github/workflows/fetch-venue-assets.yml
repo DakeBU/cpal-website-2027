@@ -1,0 +1,87 @@
+name: Fetch official Hitotsubashi venue assets
+
+on:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-assets:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download and prepare venue assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets/images/venue
+
+          # A reusable, CC BY-SA exterior photograph of the National Center of
+          # Sciences building, which houses Hitotsubashi Hall.
+          curl --fail --location --retry 4 --retry-delay 2 \
+            --user-agent 'CPAL-2027-website/1.0' \
+            'https://commons.wikimedia.org/wiki/Special:Redirect/file/NII%20-%20National%20Center%20of%20Sciences%20Build.jpg?width=1400' \
+            --output /tmp/hitotsubashi-hall-source.jpg
+
+          # Official English Hitotsubashi Hall access map. We rasterize the
+          # official PDF locally instead of hot-linking the old accessen.gif,
+          # which is not reliably served by the university website.
+          curl --fail --location --retry 4 --retry-delay 2 \
+            --user-agent 'CPAL-2027-website/1.0' \
+            'https://www.hit-u.ac.jp/hall/file/accesspdfen.pdf' \
+            --output /tmp/hitotsubashi-access.pdf
+
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils >/dev/null
+          python3 -m pip install --quiet pillow
+
+          pdftoppm -png -f 1 -singlefile -r 160 \
+            /tmp/hitotsubashi-access.pdf /tmp/hitotsubashi-access
+
+          python3 - <<'PY'
+          from PIL import Image, ImageChops
+          from pathlib import Path
+
+          out = Path('assets/images/venue')
+
+          # Keep the full exterior view and downsize it for fast page loads.
+          photo = Image.open('/tmp/hitotsubashi-hall-source.jpg').convert('RGB')
+          photo.thumbnail((1200, 1200), Image.Resampling.LANCZOS)
+          photo.save(out / 'hitotsubashi-hall.jpg', quality=88, optimize=True, progressive=True)
+
+          # Trim only the empty white margin around the official map PDF page.
+          access = Image.open('/tmp/hitotsubashi-access.png').convert('RGB')
+          white = Image.new('RGB', access.size, 'white')
+          diff = ImageChops.difference(access, white).convert('L')
+          mask = diff.point(lambda p: 255 if p > 8 else 0)
+          bbox = mask.getbbox()
+          if bbox:
+              l, t, r, b = bbox
+              pad = 24
+              bbox = (max(0, l-pad), max(0, t-pad), min(access.width, r+pad), min(access.height, b+pad))
+              access = access.crop(bbox)
+          access.thumbnail((1400, 1400), Image.Resampling.LANCZOS)
+          access.save(out / 'hitotsubashi-access-map.png', optimize=True)
+          PY
+
+          file assets/images/venue/hitotsubashi-hall.jpg
+          file assets/images/venue/hitotsubashi-access-map.png
+
+      - name: Commit local venue assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/images/venue/hitotsubashi-hall.jpg assets/images/venue/hitotsubashi-access-map.png
+          if git diff --cached --quiet; then
+            echo 'Venue assets already up to date.'
+            exit 0
+          fi
+          git commit -m 'Host Hitotsubashi venue photo and official access map locally'
+          git push

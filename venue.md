@@ -12,7 +12,12 @@ CPAL 2027 will take place **March 23–26, 2027** at **Hitotsubashi Hall (一橋
 
 ## Conference Venue
 
-![Entrance to the National Center of Sciences / Hitotsubashi Hall](https://2025.acsos.org/getImage/orig/entrance.jpg){: .venue-photo }
+<figure class="venue-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:NII_-_National_Center_of_Sciences_Build.jpg" target="_blank" rel="noopener">
+    <img src="{{ site.baseurl }}/assets/images/venue/hitotsubashi-hall.jpg" class="venue-photo" alt="National Center of Sciences building, home of Hitotsubashi Hall">
+  </a>
+  <figcaption class="venue-source-note">National Center of Sciences, home of Hitotsubashi Hall, in Chiyoda, Tokyo.</figcaption>
+</figure>
 
 <div class="venue-address">
 <strong>Hitotsubashi Hall (Hitotsubashi University)</strong><br>
@@ -52,11 +57,16 @@ A convenient rail route is the **Keikyu Line** from Haneda Airport to **Mita Sta
 
 A convenient route is the **Narita Express (N'EX)** to **Tokyo Station**, then continue via Otemachi/Takebashi as above. From Tokyo Station, a taxi to the National Center of Sciences is also straightforward, especially with luggage.
 
-## Official Access Map
+## Official Hitotsubashi Hall Access Map
 
-![Official Hitotsubashi Hall access map](https://www.hit-u.ac.jp/hall/images/accessen.gif){: .venue-map-image }
+<figure class="venue-figure">
+  <a href="https://www.hit-u.ac.jp/hall/file/accesspdfen.pdf" target="_blank" rel="noopener">
+    <img src="{{ site.baseurl }}/assets/images/venue/hitotsubashi-access-map.png" class="venue-map-image" alt="Official Hitotsubashi Hall access map showing Jimbocho and Takebashi stations">
+  </a>
+  <figcaption class="venue-source-note">Official Hitotsubashi University access map. Click the map to open the original English PDF.</figcaption>
+</figure>
 
-The university's official access information is available on the [Hitotsubashi Hall access page](https://www.hit-u.ac.jp/hall/accessen.html) and the [Hitotsubashi University Chiyoda Campus directions page](https://www.hit-u.ac.jp/eng/about/direction/).
+The university's official access information is also available on the [Hitotsubashi Hall access page](https://www.hit-u.ac.jp/hall/accessen.html) and the [Hitotsubashi University Chiyoda Campus directions page](https://www.hit-u.ac.jp/eng/about/direction/).
 
 ## Interactive Map
 
