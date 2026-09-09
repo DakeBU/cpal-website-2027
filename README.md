@@ -20,26 +20,10 @@ as well as scientific foundations for learning with parsimony.
 We are pleased to announce the Fourth Conference on Parsimony and Learning,
 to be held at **Hitotsubashi Hall in Tokyo, Japan**.
 
-Registration and the CPAL 2027 OpenReview portal are being prepared. The
-header links are already reserved and will point to the official external
-services when they are released.
-
 <span class="fs-6">
 [Register Now]({{ '/registration/' | relative_url }}){: .btn}
 </span>
 
-# Keynote Speakers
-
-Invited speakers for CPAL 2027 will be announced here after confirmations are
-complete.
-
-{: .forthcoming }
-**Keynote speaker announcements are forthcoming.**
-
-# Conference Hosts
-
-Host and institutional acknowledgements will be added when confirmed.
-
 # Conference Sponsors
 
-Sponsor acknowledgements will be added when confirmed. See the [Sponsors]({{ '/sponsors/' | relative_url }}) page for updates.
+CPAL 2027 welcomes support from industry, foundations, research organizations, and other partners. See the [Sponsors]({{ '/sponsors/' | relative_url }}) page and the [CPAL 2027 Sponsorship Prospectus]({{ '/sponsorship_opportunities/' | relative_url }}) for sponsorship opportunities.
